@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Supplier Directory</title>
+        <link rel="stylesheet" href="css">
+    </head>
+
+    <body>
+
+        <main>
+            <h3>Supplier Directory</h3>
+            <hr>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Company Name</th>
+                    <th>Company Website</th>
+                    <th>Manager Name</th>
+                    <th>Manager Name</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="tempSupplier : ${suppliers}">
+                    <td th:text="${tempSupplier.productName}"/>
+                    <td th:text="${tempSupplier.companyName}"/>
+                    <td th:text="${tempSupplier.companyWebSite}"/>
+                    <td th:text="${tempSupplier.managerName}"/>
+                    <td th:text="${tempSupplier.managerEmail}"/>
+                </tr>
+                </tbody>
+            </table>
+
+        </main>
+    </body>
+</html>
